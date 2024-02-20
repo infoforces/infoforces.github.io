@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Красивая кнопка для скачивания файлов</title>
+  <title>InfoForces</title>
   <style>
     body {
-  background: linear-gradient(to right, #76138f, #FF0000);
+      background: linear-gradient(to right, #76138f, #FF0000);
+    }
 
     .button-container {
       display: flex;
@@ -25,17 +26,23 @@
       margin: 1rem;
       background-color: linear-gradient(to left, #FF0000, #FF0000);
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s;
     }
 
+    .download-button:hover {
+      transform: scale(1.15);
+    }
 
   </style>
 </head>
 <body>
-  <a href="A.txt" download class="download-button">A</a>
-  <a href="B.txt" download class="download-button">B</a>
-  <a href="C.txt" download class="download-button">C</a>
-  <a href="D.txt" download class="download-button">D</a>
-  <a href="E.txt" download class="download-button">E</a>
+  <div class="button-container">
+    <a href="A.txt" download class="download-button">A</a>
+    <a href="B.txt" download class="download-button">B</a>
+    <a href="C.txt" download class="download-button">C</a>
+    <a href="D.txt" download class="download-button">D</a>
+    <a href="E.txt" download class="download-button">E</a>
+  </div>
 
 </body>
 </html>
