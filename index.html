@@ -17,11 +17,11 @@
         color: #fff;
         padding: 10px 0;
         text-align: center;
-        z-index: 1000; /* Чтобы шапка была выше кнопок */
-	font-size: 60px;
+        z-index: 1000; 
+        font-size: 25px;
     }
     .content {
-        padding: 100px 20px 20px; /* Увеличил padding, чтобы контент начинался после шапки */
+        padding: 100px 20px 20px;
     }
 
     .button-container {
@@ -30,7 +30,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
-      margin-top: 20px; /* Добавил верхний отступ, чтобы кнопки не находились слишком близко к шапке */
+      margin-top: 20px;
     }
 
     .download-button {
@@ -42,7 +42,7 @@
       display: inline-block;
       font-size: 20px;
       margin: 1rem;
-      background: linear-gradient(to left, #76138f,rgba(0, 0, 0, 0));
+      background: linear-gradient(to left, #76138f, rgba(0, 0, 0, 0));
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
       transition: transform 0.3s;
     }
@@ -51,11 +51,23 @@
       transform: scale(1.15);
     }
 
+    .chat-container {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        width: 80%;
+        border-radius: 10px 10px 0 0;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
   </style>
 </head>
 <body>
   <div class="header">
-        <h1|>InfoForces (by Alex)</h1>
+        <h1>InfoForces (by Alex)</h1>
     </div>
     <div class="content">
         <p></p>
@@ -67,5 +79,17 @@
         <a href="D.txt" download class="download-button">1D</a>
         <a href="E.txt" download class="download-button">1E</a>
     </div>
+     <div class="chat-container">
+        <div id="chat-box">
+        </div>
+        <input type="text" id="user-input" placeholder="Введите сообщение...">
+        <button onclick="openTelegramBot()">Отправить</button>
+    </div>
+
+    <script>
+      function openTelegramBot() {
+        window.open('https://gpt-chatbot.ru', '_blank');
+      }
+    </script>
 </body>
-</html> 
+</html>
